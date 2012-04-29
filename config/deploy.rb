@@ -55,4 +55,4 @@ namespace :deploy do
   
 end
 
-# require 'capistrano-unicorn'
+require 'capistrano-unicorn'
