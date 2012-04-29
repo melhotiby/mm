@@ -43,10 +43,10 @@ namespace :deploy do
     run "cd #{current_path} && kill -s USR2 `cat tmp/pids/unicorn.pid`"
   end
   # 
-  # desc "Start unicorn"
-  # task :start, :except => { :no_release => true } do
-  #   run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
-  # end
+  desc "Start unicorn"
+  task :start, :except => { :no_release => true } do
+    run "cd #{current_path} ; bundle exec unicorn -c unicorn/production.rb -E production -D"
+  end
   # 
   # desc "Stop unicorn"
   # task :stop, :except => { :no_release => true } do
@@ -54,5 +54,3 @@ namespace :deploy do
   # end
   
 end
-
-require 'capistrano-unicorn'
