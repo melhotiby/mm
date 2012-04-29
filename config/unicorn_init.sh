@@ -5,7 +5,7 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/var/rails/current/mm
+APP_ROOT=/var/rails/mm/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="$APP_ROOT/bin/unicorn -D -c $APP_ROOT/config/unicorn.rb"
 action="$1"

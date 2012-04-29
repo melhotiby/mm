@@ -23,3 +23,7 @@ group :test do
   gem 'database_cleaner'
   gem "ruby-debug19"
 end
+
+group :development do
+  gem 'capistrano-unicorn'
+end
