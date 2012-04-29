@@ -3,6 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require "action_controller/railtie" 
 require "action_mailer/railtie" 
 require "active_resource/railtie" 
+require "sprockets/railtie"
 require 'mongoid/railtie' 
 
 if defined?(Bundler)
