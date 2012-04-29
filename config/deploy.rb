@@ -25,6 +25,7 @@ end
 
 after 'deploy:update_code', 'deploy:symlink_db'
 before "deploy:restart", "deploy:bundle"
+after "deploy:restart", "deploy:start"
 
 namespace :deploy do
   
@@ -40,12 +41,12 @@ namespace :deploy do
   
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "cd #{current_path} && kill -s USR2 `cat tmp/pids/unicorn.pid`"
+    run "cd #{current_path} && kill -s QUIT `cat tmp/pids/unicorn.pid`"
   end
   # 
   desc "Start unicorn"
   task :start, :except => { :no_release => true } do
-    run "cd #{current_path} ; bundle exec unicorn -c unicorn/production.rb -E production -D"
+    run "cd #{current_path} ; bundle exec unicorn -c config/unicorn/production.rb -E production -D"
   end
   # 
   # desc "Stop unicorn"
