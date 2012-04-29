@@ -15,6 +15,9 @@ gem 'haml'
 gem 'unicorn'
 gem 'mongoid'
 gem 'capistrano'
+gem 'execjs'
+gem 'therubyracer'
+
 
 group :test do
   gem 'rspec-rails'
