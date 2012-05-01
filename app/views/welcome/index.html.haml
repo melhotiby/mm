@@ -1,82 +1,82 @@
-.promo.promo-variable-background
-  %form#registerForm.signup.validate{:action => "https://muslimalove.com/Register/saveSection", :autocomplete => "off", :method => "post"}
-    %fieldset
-      %input{:name => "sourceEvent", :type => "hidden", :value => "home.index"}/
-      %input{:name => "currentSection", :type => "hidden", :value => "main"}/
-      %input{:name => "doRegister", :type => "hidden", :value => "true"}/
-      %input{:name => "previousSection", :type => "hidden", :value => "main"}/
-      %div{:style => "width:360px; text-align:center;"}
-        %h1
-          Find Your Muslim Partner
-          %br>/
-          For Life, Love and Marriage.
-      .form-row.validate-required.current
-        .form-label
-          %label{:for => "gender"} I am
-        .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
-          %select#gender{:name => "gender", :onblur => "validateFields('register','gender')"}
-            %option{:value => ""} -Select-
-            %option{:value => "Female"} Female
-            %option{:value => "Male"} Male
-          .errors_gender.errordiv{:style => "display:none;"}
-      .form-row.validate-required
-        .form-label
-          %label{:for => "country"} From
-        .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
-          %select#country{:name => "country", :onblur => "validateFields('register','country')"}
-            %option{:value => ""} -Select-
-          .errors_country.errordiv{:style => "display:none;"}
-      .form-row.validate-required
-        .form-label
-          %label{:for => "dateOfBirth"} Birthday
-          %a.tooltip{:href => "#", :title => "Your Date of Birth is used to calculate your age and determine your Zodiac sign"}
-            %img{:alt => "", :src => "skins/default/images/ws/i-help-sml.png"}/
-        .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0; white-space:nowrap;"}
-          %select#dateOfBirth_mm{:name => "dateOfBirth_mm"}
-            %option{:value => ""} -Month-
-          %select#dateOfBirth_dd{:name => "dateOfBirth_dd"}
-            %option{:value => ""} -Day-
-          %select#dateOfBirth_yyyy{:name => "dateOfBirth_yyyy"}
-          .errors_dateOfBirth.errordiv{:style => "display:none;"}
-      .form-row.validate-required
-        .form-label
-          %label{:for => "username"} Username
-        .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
-          %input#username{:maxlength => "50", :name => "username", :onblur => "validateFields('register','username')", :tabindex => "", :type => "text", :value => ""}/
-          .errors_username.errordiv{:style => "display:none;"}
-      .form-row.validate-required
-        .form-label
-          %label{:for => "password"} Password
-        .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
-          %input#password{:name => "password", :onblur => "validateFields('register','password')", :type => "password", :value => ""}/
-          .errors_password.errordiv{:style => "display:none;"}
-      .form-row.validate-required.validate-email
-        .form-label
-          %label{:for => "email"} Email Address
-        .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
-          %input#email{:maxlength => "128", :name => "email", :onblur => "validateFields('register','email')", :tabindex => "", :type => "text", :value => ""}/
-          .errors_email.errordiv{:style => "display:none;"}
-      .form-row
-        .form-field
-          By clicking Join Now, you
-          %br>/
-          agree to the
-          %a{:href => "terms/index-chrome=false.html", :rel => "facebox[.terms]"} Terms and Conditions
-      .form-submit
-        %span.btn-join
-          %input#RegisterSubmit{:type => "submit", :value => "Join Now"}/
-        #pleaseWait{:style => "display:none; margin-left:120px;"}
-          %img{:alt => "Please wait...", :src => "skins/default/images/ws/ajax_progress.gif", :style => "vertical-align:middle; margin:0 8px 0 0;"}/
-          %span Please Wait...
-      %script{:src => "", :type => "text/javascript"}
-  :css
-    #RegisterSubmit, #RegisterSubmitDisabled { margin-left:120px; }
-.content
-  .container.testimonial
-    .col-0-5
-      %img{:src => ""}/
-    .col-2-5.last.round
-      .block-content
-        %blockquote
-          %p I found my true partner on this site and we now have two beautiful children, Ahmed and Mo. Thank you so much for helping me have a great life with my true love  
-        %p - Sara
+/ .promo.promo-variable-background
+/   %form#registerForm.signup.validate{:action => "https://muslimalove.com/Register/saveSection", :autocomplete => "off", :method => "post"}
+/     %fieldset
+/       %input{:name => "sourceEvent", :type => "hidden", :value => "home.index"}/
+/       %input{:name => "currentSection", :type => "hidden", :value => "main"}/
+/       %input{:name => "doRegister", :type => "hidden", :value => "true"}/
+/       %input{:name => "previousSection", :type => "hidden", :value => "main"}/
+/       %div{:style => "width:360px; text-align:center;"}
+/         %h1
+/           Find Your Muslim Partner
+/           %br>/
+/           For Life, Love and Marriage.
+/       .form-row.validate-required.current
+/         .form-label
+/           %label{:for => "gender"} I am
+/         .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
+/           %select#gender{:name => "gender", :onblur => "validateFields('register','gender')"}
+/             %option{:value => ""} -Select-
+/             %option{:value => "Female"} Female
+/             %option{:value => "Male"} Male
+/           .errors_gender.errordiv{:style => "display:none;"}
+/       .form-row.validate-required
+/         .form-label
+/           %label{:for => "country"} From
+/         .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
+/           %select#country{:name => "country", :onblur => "validateFields('register','country')"}
+/             %option{:value => ""} -Select-
+/           .errors_country.errordiv{:style => "display:none;"}
+/       .form-row.validate-required
+/         .form-label
+/           %label{:for => "dateOfBirth"} Birthday
+/           %a.tooltip{:href => "#", :title => "Your Date of Birth is used to calculate your age and determine your Zodiac sign"}
+/             %img{:alt => "", :src => "skins/default/images/ws/i-help-sml.png"}/
+/         .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0; white-space:nowrap;"}
+/           %select#dateOfBirth_mm{:name => "dateOfBirth_mm"}
+/             %option{:value => ""} -Month-
+/           %select#dateOfBirth_dd{:name => "dateOfBirth_dd"}
+/             %option{:value => ""} -Day-
+/           %select#dateOfBirth_yyyy{:name => "dateOfBirth_yyyy"}
+/           .errors_dateOfBirth.errordiv{:style => "display:none;"}
+/       .form-row.validate-required
+/         .form-label
+/           %label{:for => "username"} Username
+/         .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
+/           %input#username{:maxlength => "50", :name => "username", :onblur => "validateFields('register','username')", :tabindex => "", :type => "text", :value => ""}/
+/           .errors_username.errordiv{:style => "display:none;"}
+/       .form-row.validate-required
+/         .form-label
+/           %label{:for => "password"} Password
+/         .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
+/           %input#password{:name => "password", :onblur => "validateFields('register','password')", :type => "password", :value => ""}/
+/           .errors_password.errordiv{:style => "display:none;"}
+/       .form-row.validate-required.validate-email
+/         .form-label
+/           %label{:for => "email"} Email Address
+/         .form-field{:style => "width:200px; margin:0 0 0 12px; float:left; padding:2px 0 0 0;"}
+/           %input#email{:maxlength => "128", :name => "email", :onblur => "validateFields('register','email')", :tabindex => "", :type => "text", :value => ""}/
+/           .errors_email.errordiv{:style => "display:none;"}
+/       .form-row
+/         .form-field
+/           By clicking Join Now, you
+/           %br>/
+/           agree to the
+/           %a{:href => "terms/index-chrome=false.html", :rel => "facebox[.terms]"} Terms and Conditions
+/       .form-submit
+/         %span.btn-join
+/           %input#RegisterSubmit{:type => "submit", :value => "Join Now"}/
+/         #pleaseWait{:style => "display:none; margin-left:120px;"}
+/           %img{:alt => "Please wait...", :src => "skins/default/images/ws/ajax_progress.gif", :style => "vertical-align:middle; margin:0 8px 0 0;"}/
+/           %span Please Wait...
+/       %script{:src => "", :type => "text/javascript"}
+/   :css
+/     #RegisterSubmit, #RegisterSubmitDisabled { margin-left:120px; }
+/ .content
+/   .container.testimonial
+/     .col-0-5
+/       %img{:src => ""}/
+/     .col-2-5.last.round
+/       .block-content
+/         %blockquote
+/           %p I found my true partner on this site and we now have two beautiful children, Ahmed and Mo. Thank you so much for helping me have a great life with my true love  
+/         %p - Sara

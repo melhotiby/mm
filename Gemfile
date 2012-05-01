@@ -17,7 +17,11 @@ gem 'mongoid'
 gem 'capistrano'
 gem 'execjs'
 gem 'therubyracer'
-
+gem "simple_form", "~> 2.0.2"
+gem 'country_select'
+gem "paperclip", "~> 3.0"
+gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem "geokit", "~> 1.6.5"
 
 group :test do
   gem 'rspec-rails'
@@ -29,4 +33,6 @@ end
 
 group :development do
   gem 'capistrano-unicorn'
+  gem 'hpricot'
+  gem 'ruby_parser'
 end

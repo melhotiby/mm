@@ -10,7 +10,7 @@ module ApplicationHelper
   
   
   def logo
-    image_tag("logo-big.png", alt: "MuslimaLove.com", title: "MuslimaLove.com")
+    # image_tag("logo-big.png", alt: "MuslimaLove.com", title: "MuslimaLove.com")
   end
   
 end

@@ -1,4 +1,4 @@
-= form_for @profile do |f|
+= simple_form_for @profile do |f|
   -if @profile.errors.any?
     #error_explanation
       %h2= "#{pluralize(@profile.errors.count, "error")} prohibited this profile from being saved:"
@@ -7,8 +7,16 @@
           %li= msg
 
   .field
-    = f.label :address
-    = f.text_field :address
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :address
+    = f.input :first_name
+    = f.input :first_name
+    = f.input :first_name
+    = f.input :username
+    = f.input :description, :as => :text
+    = f.input :accepts,     :as => :check_boxes
+    = f.button :submit
   .field
     = f.label :about_me
     = f.text_area :about_me
