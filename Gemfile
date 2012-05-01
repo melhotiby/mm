@@ -20,8 +20,10 @@ gem 'therubyracer'
 gem "simple_form", "~> 2.0.2"
 gem 'country_select'
 gem "paperclip", "~> 3.0"
-gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem "devise"
 gem "geokit", "~> 1.6.5"
+gem 'mongo', '1.6.2'
+gem 'bson_ext', '1.6.2'
 
 group :test do
   gem 'rspec-rails'
@@ -29,10 +31,15 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem "ruby-debug19"
+  gem 'database_cleaner'
 end
 
 group :development do
   gem 'capistrano-unicorn'
   gem 'hpricot'
   gem 'ruby_parser'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'annotate'
+  gem 'growl'
 end

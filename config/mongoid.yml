@@ -1,9 +1,9 @@
 development:
-  host: localhost
+  host: 0.0.0.0
   database: mm_development
 
 test:
-  host: localhost
+  host: 0.0.0.0
   database: mm_test
 
 # set these environment variables on your prod server

@@ -37,7 +37,7 @@ class User
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
   
-  validates_presence_of, 
+  # validates_presence_of, 
 
   before_create :generate_lat_long
 
