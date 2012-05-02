@@ -29,30 +29,30 @@ after "deploy:restart", "deploy:start"
 after "deploy:restart", "deploy:precompile"
 
 namespace :deploy do
-  
+
   desc "Symlinks the database.yml"
   task :symlink_db, :roles => :app do
     run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
   end
-  
+
   desc "run bundle install and ensure all gem requirements are met"
   task :bundle do
     run "cd #{current_path} && bundle install  --without=test"
   end
-  
+
   desc "Stop unicorn"
   task :restart, :except => { :no_release => true } do
     run "cd #{current_path} && kill -s QUIT `cat tmp/pids/unicorn.pid`"
   end
-  
+
   desc "Start unicorn"
   task :start, :except => { :no_release => true } do
     run "cd #{current_path} ; bundle exec unicorn -c config/unicorn/production.rb -E production -D"
   end
-  
+
   desc "Compile assets"
   task :precompile, :roles => :app do
     run "cd #{release_path} && rake RAILS_ENV=#{rails_env} assets:precompile"
   end
-  
+
 end

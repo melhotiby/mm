@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "info@muslimalove.com"
+  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -16,7 +16,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/mongoid'
+  require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -85,7 +85,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "731da80212f8a6e3ac1454f8b005d3536180168bc5c543f2bf7e35fb622dbd4e8a5f5f14859c30cf8aa52d164ac6dca127ef4ddd8204f6674bd35a67405b22af"
+  # config.pepper = "a0f1ac8fa27fba42e5cfb8c5f2729ae5a5443db7868450da2a2ac7bbe2e7016f9bc31de82c592774f53b28353883ae86fc9a6f3ba339fbfd7078964089cda881"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

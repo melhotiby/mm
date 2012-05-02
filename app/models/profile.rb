@@ -1,3 +1,2 @@
-class Profile
-  include Mongoid::Document
+class Profile < ActiveRecord::Base
 end

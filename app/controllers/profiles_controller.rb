@@ -1,11 +1,11 @@
 class ProfilesController < ApplicationController
+  before_filter :get_profile, :only => [:show, :edit, :update]
 
   def index
     @profiles = Profile.all
   end
 
   def show
-    @profile = Profile.find(params[:id])
   end
 
   def new
@@ -13,7 +13,6 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    @profile = Profile.find(params[:id])
   end
 
   def create
@@ -21,16 +20,15 @@ class ProfilesController < ApplicationController
     if @profile.save
       redirect_to @profile, notice: 'Profile was successfully created.'
     else
-      render action: "new"
+      render "new"
     end
   end
 
   def update
-    @profile = Profile.find(params[:id])
     if @profile.update_attributes(params[:profile])
       redirect_to @profile, notice: 'Profile was successfully updated.'
     else
-      render action: "edit"
+      render "edit"
     end
   end
 
@@ -38,5 +36,9 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
     @profile.destroy
     redirect_to profiles_url 
+  end
+  
+  def get_profile
+    @profile = Profile.find(params[:id])
   end
 end

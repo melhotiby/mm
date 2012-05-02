@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mm_development
+  pool: 5
+  username: matt_elhotiby
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mm_test
+  pool: 5
+  username: matt_elhotiby
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: mm_production
+  pool: 5
+  username: matt_elhotiby
+  password:

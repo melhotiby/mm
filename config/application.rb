@@ -1,10 +1,11 @@
 require File.expand_path('../boot', __FILE__)
 
-require "action_controller/railtie" 
-require "action_mailer/railtie" 
-require "active_resource/railtie" 
+
+require "active_record/railtie"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
 require "sprockets/railtie"
-require 'mongoid/railtie' 
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -41,7 +42,7 @@ module Mm
     config.encoding = "utf-8"
 
     config.generators do |g|
-      g.orm             :mongoid
+      # g.orm             :mongoid
       g.template_engine :haml
       g.test_framework  :rspec, :fixtures => false
       g.integration_tool :rspec

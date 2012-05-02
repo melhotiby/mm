@@ -13,7 +13,6 @@ end
 gem 'jquery-rails'
 gem 'haml'
 gem 'unicorn'
-gem 'mongoid'
 gem 'capistrano'
 gem 'execjs'
 gem 'therubyracer'
@@ -22,8 +21,8 @@ gem 'country_select'
 gem "paperclip", "~> 3.0"
 gem "devise"
 gem "geokit", "~> 1.6.5"
-gem 'mongo', '1.6.2'
 gem 'bson_ext', '1.6.2'
+gem 'pg'
 
 group :test do
   gem 'rspec-rails'
@@ -32,6 +31,7 @@ group :test do
   gem 'database_cleaner'
   gem "ruby-debug19"
   gem 'database_cleaner'
+  gem "shoulda-matchers"
 end
 
 group :development do
@@ -42,4 +42,5 @@ group :development do
   gem 'guard-rspec'
   gem 'annotate'
   gem 'growl'
+  gem "shoulda-matchers"
 end
