@@ -32,6 +32,10 @@ group :test do
   gem 'ruby-debug19'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem "rb-fsevent", "~> 0.9.1"
+  gem 'growl'
+  gem "guard-spork", "~> 0.7.1"
+  gem 'spork', '~> 1.0rc'
 end
 
 group :development do
@@ -41,6 +45,5 @@ group :development do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'annotate'
-  gem 'growl'
   gem 'shoulda-matchers'
 end
